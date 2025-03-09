@@ -11,8 +11,6 @@ This project explores multimodal learning techniques to align and integrate mult
 
 ## 📂 Project Structure
 - `project.ipynb` – Code and analysis for multimodal learning experiments.
-- `media/` – Figures and diagrams used in the paper.
-- `references.bib` – Bibliography of related research papers.
 
 ## 🚀 Getting Started
 
