@@ -2,11 +2,11 @@
 
 This project investigates multimodal learning techniques for aligning and integrating multiple data types—image, audio, and text—into a shared latent representation space. We propose a novel, scalable framework that enables indirect cross-modal translation by using translator functions structured as edges in a graph architecture.
 
-## 📄 Full Report
+## Full Report
 
 You can find the full paper [here](https://github.com/Yann-b-b/MULTIMODAL_Project/blob/main/MULTIMODAL_COURSE_PROJECT%20(1).pdf).
 
-## 🔍 Overview
+## Overview
 
 Current models like CLIP and ImageBind are limited by their dependence on image-paired datasets and modality gaps. Our framework enables:
 
@@ -15,7 +15,7 @@ Current models like CLIP and ImageBind are limited by their dependence on image-
 - **Preservation of modality-specific features**  
 - **Improved cross-modal alignment through contrastive fine-tuning and post-hoc techniques**
 
-## 🧠 Key Concepts
+## Key Concepts
 
 - **Graph-based modality bridging**: Modalities = nodes, translators = edges  
 - **MLP-based translators**: Enable cross-modal embedding conversion  
@@ -23,7 +23,7 @@ Current models like CLIP and ImageBind are limited by their dependence on image-
 - **Contrastive fine-tuning**: Improves cross-modal cohesion  
 - **Post-hoc alignment**: Refines latent spaces after training  
 
-## 📊 Modalities Used
+## Modalities Used
 
 - **Image/Video** embeddings via pretrained visual encoders (e.g., ImageBind)  
 - **Audio** embeddings via pretrained audio encoders  
@@ -31,7 +31,7 @@ Current models like CLIP and ImageBind are limited by their dependence on image-
 
 Each data sample includes precomputed (image, audio, text) embeddings.
 
-## 🏗️ Architecture
+## Architecture
 
 - Each translator is a small MLP mapping one modality to another.
 - Traversals like `image → text → audio → image` are used to measure how well information is preserved.
@@ -43,26 +43,26 @@ L_recon = 1 - cosine_similarity(x_original, x_reconstructed)
 
 
 
-## 🔁 Adding New Modalities
+## Adding New Modalities
 
 1. Create an encoder for the new modality.
 2. Link it to at least one existing modality using contrastive learning.
 3. Train a translator MLP.
 4. Embed it into the existing graph.
 
-## 📈 Evaluation Metrics
+## Evaluation Metrics
 
 - **Inter-modality distance** (cosine/Euclidean)  
 - **Cluster separability**  
 - **Retrieval accuracy**
 
-## 🧪 Experiments
+## Experiments
 
 - Compared results of CLIP, ImageBind, and DMVAE  
 - Visualized modality gaps  
 - Evaluated reconstruction performance using synthetic multi-hop translations  
 
-## 📚 References
+## References
 
 - [CLIP](https://arxiv.org/abs/2103.00020)  
 - [ImageBind](https://arxiv.org/abs/2305.05665)  
